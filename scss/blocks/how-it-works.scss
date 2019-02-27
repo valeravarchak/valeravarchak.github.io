@@ -1,0 +1,239 @@
+.doctor {
+    position: relative;
+    width: 100%;
+    vertical-align: bottom;
+}
+.how-it-works {
+    position: relative;
+    width: 100%;
+    background-color: #66cfcf;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: -20%;
+    padding-top: 100px;
+
+
+
+    .title {
+        position: relative;
+        margin: 10px;
+
+        h1 {
+            color: white;
+            font-size: 80px;
+            font-weight: bold;
+            width: 600px;
+        }
+
+        input {
+            width: 270px;
+            height: 70px;
+            border: 2px solid white;
+            background-color: transparent;
+            border-radius: 5px;
+            color: white;
+        }
+    }
+
+    .step {
+        min-width: 700px;
+
+        div {
+            max-width: 450px;
+            color: white;
+            text-align: right;
+            margin: 0 auto;
+            padding-top: 18px;
+            box-sizing: border-box;
+            position: relative;
+
+
+            figure {
+                width: 60px;
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+                position: relative;
+            }
+
+            h2 {
+                font-size: 22px;
+                margin-bottom: 0px;
+            }
+
+            h5 {
+                font-weight: 100;
+                font-size: 16px;
+                margin-top: 5px;
+            }
+
+            &:nth-child(odd) {
+                text-align: left;
+                padding-left: 70px;
+                padding-right: 140px;
+
+                figure {
+                    margin-left: -70px;
+                    float: left;
+                }
+
+                img {
+                    position: relative;
+                }
+
+                .step_arr_right {
+                    position: absolute;
+                    border: 1px solid white;
+                    width: 260px;
+                    height: 150px;
+                    left: calc(100% - 140px);
+                    top: 45px;
+                    border-radius: 0px 130px 130px 0px;
+                    clip-path: polygon(0px 0px, 0px 0px, 100% 0px, 100% 100%, 70% 110%);
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 26px;
+                        height: 15px;
+                        background-color: white;
+                        clip-path: polygon(0 50%, 100% 100%, 100% 0);
+                        top: 141px;
+                        left: 163px;
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                text-align: right;
+                padding-right: 70px;
+                padding-left: 140px;
+
+                figure {
+                    margin-right: -70px;
+                    float: right;
+                }
+
+                img {
+                    position: relative;
+                }
+            }
+
+
+
+                .step_arr_left {
+                    position: absolute;
+                    border: 1px solid white;
+                    width: 260px;
+                    height: 180px;
+                    left: calc(0% - 140px);
+                    top: 45px;
+                    border-radius:  130px 0px 0px 130px;
+                    clip-path: polygon(0% 0%, 0% 103%, 112px 103%, 100% 0%);
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        background-color: white;
+                        width: 26px;
+                        height: 15px;
+
+                        top: 171px;
+                        left: 92px;
+                        clip-path: polygon(0 100%, 100% 50%, 0 0);
+                    }
+                }
+
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 1320px) {
+
+    .how-it-works {
+        text-align: center;
+        .title{
+            h1 {
+                font-size: 60px;
+                width: 480px;
+            }
+
+            input {
+                width: 200px;
+                height: 70px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    .how-it-works{
+
+         .step {
+             max-width: 480px;
+             min-width: 0;
+
+             div {
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                h5 {
+                    font-size: 12px;
+                }
+
+                &:nth-child(odd) {
+
+                    .step_arr_right{
+                        height: 30px;
+                        left: calc(0% - 23px);
+                        top: 100%;
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                        border-top: 0px;
+                        border-left: 0px;
+                        border-bottom: 0px;
+                        clip-path: none;
+
+                        &::before {
+                            clip-path: polygon(0 0, 50% 100%, 100% 0);
+                            top: 30px;
+                            left: 246px;
+
+                        }
+                    }
+
+                }
+
+                &:nth-child(2) {
+
+                    .step_arr_left {
+                        height: 30px;
+                        left: 35%;
+                        top: 100%;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                        border-top: 0px;
+                        border-right: 0px;
+                        border-bottom: 0px;
+                        clip-path: none;
+
+                        &::before {
+                            top: 30px;
+                            left: -13px;
+                            clip-path: polygon(0 0, 50% 100%, 100% 0);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

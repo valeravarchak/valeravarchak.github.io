@@ -1,0 +1,80 @@
+.grandma_and_daughter {
+    position: relative;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.our-preferences {
+    position: relative;
+    width: 100%;
+    background-color: #005173;
+    margin-top: -20%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+
+    img {
+        position: absolute;
+        width: 50%;
+        bottom: 0%;
+        right: 0%;
+    }
+
+    .preferences {
+        position: relative;
+        margin: 0;
+        max-width: 460px;
+
+
+
+        hr {
+            width: 60px;
+            border: 0;
+            height: 2px;
+            background: #8ae2e2;
+        }
+
+        span {
+            text-align: left;
+            display: block;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+    }
+
+    .prefereces_title {
+        position: relative;
+        max-width: 510px;
+
+        h1 {
+            color: white;
+            font-size: 80px;
+        }
+
+        input {
+            width: 270px;
+            height: 70px;
+            border: 2px solid white;
+            background-color: transparent;
+            border-radius: 5px;
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    .our-preferences {
+        .preferences {
+            span {
+                font-size: 10px;
+            }
+        }
+
+    }
+
+}
